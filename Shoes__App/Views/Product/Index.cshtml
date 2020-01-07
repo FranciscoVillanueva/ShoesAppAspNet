@@ -1,0 +1,118 @@
+﻿@model List<BusinessLayer.ProductEntity>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Observations
+        </th>
+        <th>
+            Price Distributor
+        </th>
+        <th>
+            Price Client
+        </th>
+        <th>
+            Price Member
+        </th>
+        <th>
+            Is Enabled
+        </th>
+        <th>
+            Keywords
+        </th>
+        <th>
+            Date Update
+        </th>
+        <th>
+            Brand Code
+        </th>
+        <th>
+            Season
+        </th>
+        <th>
+            Color
+        </th>
+        <th>
+            Provider
+        </th>
+        <th>
+            Product Code
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observations)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceDistributor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceClient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceMember)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsEnabled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Keywords)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateUpdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatBrandCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatCatalogsSeason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatProvidersName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatTypeCode)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) <br/>
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) <br/> 
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }) <br/>
+            </td>
+        </tr>
+    }
+
+</table>
