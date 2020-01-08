@@ -87,6 +87,7 @@ namespace BusinessLayer
 
         public void Delete(Products products)
         {
+            db.ImagesProduct.RemoveRange(products.ImagesProduct);
             db.Products.Remove(products);
             db.SaveChanges();
         }
@@ -96,7 +97,7 @@ namespace BusinessLayer
             ImagesProduct ImagReg = new ImagesProduct()
             {
                 IdImageProduct = id, //id,
-                Decription = "Image",
+                Decription = "Image of product " + id,
                 Image = img,
                 DateUpdate = DateTime.Now + "",
                 IsEnabled = "true",
