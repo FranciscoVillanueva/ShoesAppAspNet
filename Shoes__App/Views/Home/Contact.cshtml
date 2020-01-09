@@ -2,32 +2,57 @@
     ViewBag.Title = "Contact";
 }
 <style>
-    .shaker {
-        animation: .5s shaker infinite alternate;
+
+    /*body {
+        animation: fadeInAnimation ease 5s;
+        animation-fill-mode: forwards;
     }
 
-    .shaker:hover {
-        animation: none;
+    @@keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: .8;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }*/
+
+    .shaker {
+        animation: 2s shaker infinite alternate ease-in-out;
     }
+
+        .shaker:hover {
+            animation: none;
+        }
 
     @@keyframes shaker {
         0% {
+            transform: rotateX(-45deg);
+        }
+
+        80% {
+            transform: rotateX(20deg);
+        }
+        /*0% {
             transform: rotate(-15deg);
         }
 
-        5% {
+        80% {
             transform: rotate(15deg);
-        }
-
-        10% {
+        }*/
+        /*10% {
             transform: rotate(-15deg);
         }
 
         15% {
             transform: rotate(15deg);
-        }
-
-        20% {
+        }*/
+        90% {
             transform: rotate(0deg);
         }
 

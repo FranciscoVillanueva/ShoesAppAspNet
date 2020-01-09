@@ -18,6 +18,26 @@
         .buttonGradient:hover {
             background-position: left bottom;
         }
+
+        body {
+            animation: fadeInAnimation ease 5s;
+            animation-fill-mode: forwards;
+        }
+
+        @@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: .8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
     </style>
 </head>
 <body>
