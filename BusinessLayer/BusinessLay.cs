@@ -104,10 +104,13 @@ namespace BusinessLayer
             };
             db.ImagesProduct.Add(ImagReg);
             db.SaveChanges();
-            //SqlException: The INSERT statement conflicted
-            //        with the FOREIGN KEY constraint "FK_CatBrandsImagesProduct".
-            //        The conflict occurred in database "DataProducts", table "dbo.CatBrands", 
-            //    column 'IdBrand'.
+        }
+
+        public void DeleteImage(int IdImage)
+        {
+            ImagesProduct ImagToDelete = db.ImagesProduct.Find(IdImage);
+            db.ImagesProduct.Remove(ImagToDelete);
+            db.SaveChanges();
         }
     }
 }

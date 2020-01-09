@@ -160,5 +160,11 @@ namespace Shoes__App.Controllers
             }
             return RedirectToAction("Edit", "Product",new {id = pro.Id });
         }
+
+        public ActionResult DeleteImage(int IdProd,int IdImag)
+        {
+            Business.DeleteImage(IdImag);
+            return RedirectToAction("Edit", "Product", new { id = IdProd});
+        }
     }
 }
