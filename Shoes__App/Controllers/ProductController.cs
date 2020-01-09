@@ -17,9 +17,23 @@ namespace Shoes__App.Controllers
         DataLay Data = new DataLay();
 
         // GET: Product
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(Business.GetProductEntities());
+        //}
+
+        public ActionResult Index(string SearchBy, string Search)
         {
-            return View(Business.GetProductEntities());
+            if (SearchBy == "Name")
+            {
+                return View(Business.GetProductEntities().
+                    Where(x => x.Nombre == Search || Search == null || x.Nombre.StartsWith(Search)).ToList());
+            }
+            else
+            {
+                return View(Business.GetProductEntities().
+                    Where(x => (x.Id + "") == Search || Search == null).ToList());
+            }
         }
 
         // GET: Products/Create

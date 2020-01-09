@@ -4,5 +4,39 @@
 @*<h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>*@
 
-<h2>This is the Shoes App where you can manage your products.</h2>
+<style>
+
+    .wraper {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-right:0px;
+    }
+
+    body {
+        background-image: linear-gradient(to right,#95a5a6,#d4eeb2,#ffffff,#e08c8c,#87c5f4);
+        background-size: 600%;
+        background-position: 0 0;
+        animation-duration: 20s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-name: gradients;
+    }
+
+    @@keyframes gradients {
+        0%  {background-position: 0 0;}
+        25% {background-position: 30% 0;}
+        50% {background-position: 55% 0;}
+        75% {background-position: 60% 0;}
+        90% {background-position: 70% 0;}
+        100% {background-position: 100% 0;}
+    }
+</style>
+
+<div class="wraper">
+    <h2>This is the Shoes App where you can manage your products.</h2>
+</div>
+
 

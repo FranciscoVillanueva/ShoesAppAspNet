@@ -1,20 +1,45 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-@*<h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>*@
+<style>
+    .shaker {
+        animation: .5s shaker infinite alternate;
+    }
 
-@*<address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>*@
-<body>
-    <br />
-    <h4>
-        <strong>By Francisco Villanueva</strong> <br /> <br />
-        <strong>Email:</strong> <a href="mailto:francisco.villanueva@softtek.com">francisco.villanueva@softtek.com</a>
-    </h4>
-</body>
+    .shaker:hover {
+        animation: none;
+    }
+
+    @@keyframes shaker {
+        0% {
+            transform: rotate(-15deg);
+        }
+
+        5% {
+            transform: rotate(15deg);
+        }
+
+        10% {
+            transform: rotate(-15deg);
+        }
+
+        15% {
+            transform: rotate(15deg);
+        }
+
+        20% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+</style>
+
+<br />
+<h4 class="shaker">
+    <strong>By Francisco Villanueva</strong> <br /> <br />
+    <strong>Email:</strong> <a href="mailto:francisco.villanueva@softtek.com">francisco.villanueva@softtek.com</a>
+</h4>
 
